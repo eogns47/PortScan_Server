@@ -31,6 +31,11 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.jasypt:jasypt:1.9.2'
 	implementation 'org.jasypt:jasypt-spring31:1.9.2'
+	//JUnit4 추가
+	testImplementation("org.junit.vintage:junit-vintage-engine") {
+		exclude group: "org.hamcrest", module: "hamcrest-core"
+	}
+
 }
 
 tasks.named('test') {
